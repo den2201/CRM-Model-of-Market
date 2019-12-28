@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CrmBL.Model
 {
-    class Context:DbContext
+   public class Context:DbContext
     {
         public Context() : base("CrmDb") { }
 
@@ -17,5 +17,7 @@ namespace CrmBL.Model
 
         public DbSet <Seller> Sellers { get; set; }
         public DbSet <Sell> Sells { get; set; }
+
+        
     }
 }
