@@ -11,20 +11,21 @@ using System.Windows.Forms;
 
 namespace CrmUI
 {
-    public partial class AddCustomerForm : Form
+    public partial class AddSellerForm : Form
     {
-        public Customer Customer { get; set; }
-        public AddCustomerForm()
+        public Seller Seller { get; set; }
+        public AddSellerForm()
         {
             InitializeComponent();
+          
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Customer = new Customer() { Name = this.textBox1.Text };
+            Seller = new Seller() { Name = this.textBox1.Text };
             Close();   
         }
 
-      
+        
     }
 }

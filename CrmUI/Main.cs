@@ -47,10 +47,7 @@ namespace CrmUI
             catalogPrduct.Show();
         }
 
-        private void AddToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
+      
 
         private void AddToolStripMenuItem2_Click(object sender, EventArgs e)
         {
@@ -63,10 +60,38 @@ namespace CrmUI
 
         }
 
-        private void ВывестиСпиToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ShowListCustomerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var catalogPrduct = new Catalog<Customer>(db.Customers);
             catalogPrduct.Show();
+        }
+
+        private void AddToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var form = new AddSellerForm();
+            if(form.ShowDialog()==DialogResult.OK)
+            {
+                db.Sellers.Add(form.Seller);
+                db.SaveChanges();
+            }
+        }
+
+        private void ShowSellersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            var catalogPrduct = new Catalog<Seller>(db.Sellers);
+            catalogPrduct.Show();
+        }
+
+        private void AddToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new AddProductForm();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                db.Products.Add(form.Product);
+                db.SaveChanges();
+            }
+
         }
     }
 }

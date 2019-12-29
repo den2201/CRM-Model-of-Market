@@ -56,6 +56,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddDataMenu\AddProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDataMenu\AddProductForm.Designer.cs">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddDataMenu\AddSellerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDataMenu\AddSellerForm.Designer.cs">
+      <DependentUpon>AddSellerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddDataMenu\AddCustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +88,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddDataMenu\AddProductForm.resx">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddDataMenu\AddSellerForm.resx">
+      <DependentUpon>AddSellerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddDataMenu\AddCustomerForm.resx">
       <DependentUpon>AddCustomerForm.cs</DependentUpon>
     </EmbeddedResource>
